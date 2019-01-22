@@ -11,4 +11,4 @@ Then write text in console.
 
 Examples: 
 The text followed by '//' in the same line is completely ignored
-/* 'text'*/ other  - Only other is printet... text is ignored
+/* 'text'*/ other  - Only 'other' is printed... 'text' is ignored
