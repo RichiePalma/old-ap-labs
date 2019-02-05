@@ -60,7 +60,7 @@ You can either run it from any shell with ```go run exercise-maps.go``` or use [
 <br>
 
 ## [geometry.go](https://github.com/RichiePalma/ap-labs/blob/master/labs/lab0.3/geometry.go)
-### Problem (Retrieved from [Golang](https://softfire-143705.appspot.com/hello-gophers/00-hello-gophers.slide#14))
+### Problem (Retrieved from [Golang Basics by Obed N Munoz](https://softfire-143705.appspot.com/hello-gophers/00-hello-gophers.slide#14))
 
 ##### Let's code: Functions vs Methods
 1. Copy the code from:
