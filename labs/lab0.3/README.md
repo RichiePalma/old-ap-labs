@@ -55,3 +55,56 @@ for _, word := range strings.Fields(s){
 ### How to test it
 
 You can either run it from any shell with ```go run exercise-maps.go``` or use [The Go Playground](https://play.golang.org/).
+
+<br>
+<br>
+
+## [geometry.go](https://github.com/RichiePalma/ap-labs/blob/master/labs/lab0.3/geometry.go)
+### Problem (Retrieved from [Golang](https://softfire-143705.appspot.com/hello-gophers/00-hello-gophers.slide#14))
+
+##### Let's code: Functions vs Methods
+1. Copy the code from:
+
+	https://github.com/adonovan/gopl.io/blob/master/ch6/geometry/geometry.go
+
+2. Paste at:
+
+	https://play.golang.org/
+
+3. Change X and Y to x and y in Point structure 
+4. Create the X and Y methods 
+5. Add a function printPoint that receices a Point and prints x and y 
+6. Add main() to use the printFunction
+
+#### How it works
+
+*X* and *Y* methods work as getters in this case.
+
+```go
+func (p Point) X() float64 {
+    return p.x
+}
+
+func(p Point) Y() float64{
+	return p.y
+}
+```
+
+So we can now use this methods for the *printPoint* function.
+
+```go
+func printPoint(p Point){
+	fmt.Println(p.X(), p.Y())
+}
+```
+
+Finally, we can test it in the main.
+
+```go
+testPoint := Point{ 4.54, 3.45}
+printPoint(testPoint)
+```
+
+### How to test it
+
+You can either run it from any shell with ```go run geometry.go``` or use [The Go Playground](https://play.golang.org/).
