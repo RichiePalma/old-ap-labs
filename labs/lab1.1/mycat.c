@@ -1,6 +1,6 @@
 // Ricardo Palma A01226922
 /* Sources:
- *			http://codewiki.wikidot.com/c:system-calls:open 
+ *		http://codewiki.wikidot.com/c:system-calls:open 
  * 		http://codewiki.wikidot.com/c:system-calls:read
  * 		http://codewiki.wikidot.com/c:system-calls:write
  * 		http://codewiki.wikidot.com/c:system-calls:close
@@ -21,8 +21,6 @@ int main(int argc, char *argv[]){
 	file = open(argv[1], O_RDONLY);	
 	char buf[SIZE_BUF]; 	// A character array where the read content will be stored.
 	
-	// /cygdrive/c/Users/Ricardo Palma/Documents/7mo Semestre/Advanced Programming/Lab1.1
-
 	if(file < 0){
 		write(2, "Error: Couldn't read file.\n'", SIZE_BUF);
 	}
