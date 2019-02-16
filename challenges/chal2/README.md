@@ -1,7 +1,6 @@
 ## Challenge 2 First Term Exam
-
 ### Problem 1: DMESG Analyzer. (Retrieved from Professor Obed N Muñoz [Github Repository](https://github.com/CodersSquad/ap-labs/blob/master/challenges/chal2/dmesg-analyzer.md))
-
+---
 Implement a system log analyzer and classifier for GNU/Linux. In this particular case, a sample log output file is provided. It's highly recommended to implement this challenge in a Linux-based operating system. This challenge involves a proper struct design choice for the logs classification and storing.
 
 ### Requirements
@@ -60,3 +59,55 @@ The program will be tested with the following cases:
 1. [dmesg.txt](https://github.com/RichiePalma/ap-labs/blob/master/challenges/chal2/dmesg.txt)
 
 ``` ./dmesg-analyzer.o dmesg.txt ```
+
+### Problem 2: Directory Scanner (Retrieved from Professor Obed N Muñoz [Github Repository](https://github.com/CodersSquad/ap-labs/blob/master/challenges/chal2/directory-scanner.md))
+---
+
+Implement a directory scanner tool for any given path. It's highly recommended to implement it for a UNIX-based machine.
+
+### Requirements
+- The program must be implemented in Golang programming language.
+- Given one path, the program must count the following file's types:
+  - Directories
+  - Symbolic Links
+  - Others
+- Use the provided template dir-scan.go
+- Repeated log classes are not allowed.
+- You need to follow the output format guidelines.
+- Coding best practices that we learned in class will be reviewed.
+- Before submitting you code, make sure it's compiling and running correctly.
+### Sample Execution
+``` ./directory-scanner /tmp ```
+
+### Sample Expected output
+
+```
+Directory Scanner Tool
++-------------------------+------+
+| Path                    | /tmp |
++-------------------------+------+
+| Directories             | 10   |
+| Symbolic Links          | 5    |
+| Other files             | 50   |
++-------------------------+------+
+```
+
+### Test Cases
+
+The program will be tested with the following cases:
+
+1. ```/tmp``` directory
+
+```./directory-scanner /tmp```
+
+2. ```/etc``` directory
+
+```./directory-scanner /etc```
+
+3. ```/usr/lib```  directory
+
+```./directory-scanner /usr/lib```
+
+### Useful links
+- https://golang.org/pkg/os/#Lstat
+- https://golang.org/pkg/path/filepath/#Walk
