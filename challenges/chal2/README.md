@@ -60,6 +60,18 @@ The program will be tested with the following cases:
 
 ``` ./dmesg-analyzer.o dmesg.txt ```
 
+### How to run it
+
+Compile the program by executing
+
+``` gcc dmesg-analyzer.c -o dmesg-analyzer.o ```
+
+And run it, simply by executing
+
+``` ./dmesg-analyzer.o dmesg.txt ``` 
+
+Where the parameter ```dmesg.txt``` is the text file to test.
+
 ### Problem 2: Directory Scanner (Retrieved from Professor Obed N Muñoz [Github Repository](https://github.com/CodersSquad/ap-labs/blob/master/challenges/chal2/directory-scanner.md))
 ---
 
@@ -111,3 +123,11 @@ The program will be tested with the following cases:
 ### Useful links
 - https://golang.org/pkg/os/#Lstat
 - https://golang.org/pkg/path/filepath/#Walk
+
+### How to run it
+
+One can test the program by executing the following command:
+
+``` go run dir-scan.go /tmp ```
+
+Where the parameter ```/tmp``` is the path to test. 
