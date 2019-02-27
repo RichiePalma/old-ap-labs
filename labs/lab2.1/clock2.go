@@ -1,9 +1,4 @@
-// Clock2 is a concurrent TCP server that periodically writes the time.
-
-/* Sources:
-			http://www.golangprograms.com/subtract-n-number-of-year-month-day-hour-minute-second-millisecond-microsecond-and-nanosecond-to-current-date-time.html
-			https://gobyexample.com/command-line-flags	
- */		
+// Clock2 is a concurrent TCP server that periodically writes the time.	
 package main
 
 import (
@@ -28,8 +23,8 @@ func handleConn(c net.Conn) {
 
 func main() {
 	args := os.Args
-	
-	listener, err :=  net.Listen("tcp", args[1]) //test localhost:9090
+	args[2] = "localhost:" + args[2]
+	listener, err :=  net.Listen("tcp", args[2]) //test localhost:9090
 	if err != nil {
 		log.Fatal(err)
 	}
