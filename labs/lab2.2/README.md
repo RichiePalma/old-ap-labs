@@ -22,7 +22,7 @@ int panicf(const char *format, ...)
 - Don't forget to handle errors properly.
 - Coding best practices implementation will be also considered.
 
-#How to run the code
+# How to run the code
 
 Compile it by linking the two .c programs with:
 
