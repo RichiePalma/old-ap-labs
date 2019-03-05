@@ -1,5 +1,6 @@
 /*
  *  Reference: https://www.linuxjournal.com/article/8603
+ * https://www.tutorialspoint.com/c_standard_library/c_macro_va_start.htm
  */
 
 #include <stdarg.h>
@@ -36,26 +37,58 @@ int infof(const char *format, ...){
 	textcolor(BRIGHT, WHITE, HIDDEN);
 	printf("INFO: ");
 	textcolor(RESET, WHITE, BLACK);
-	printf("%s\n", format);
+	//printf("%s\n", format);
+	
+	va_list ap;
+	int val;
+	
+	va_start (ap,format);
+	val = vprintf (format,ap);
+	va_end(ap);
+	return val;
 }
 
 int warnf(const char *format, ...){
 	textcolor(BRIGHT, MAGENTA, HIDDEN);
 	printf("WARNING: ");
 	textcolor(RESET, WHITE, BLACK);
-	printf("%s\n", format);
+	//printf("%s\n", format);
+	
+	va_list ap;
+	int val;
+	
+	va_start (ap,format);
+	val = vprintf (format,ap);
+	va_end(ap);
+	return val;
 }
 
 int errorf(const char *format, ...){
 	textcolor(BRIGHT, RED, HIDDEN);
 	printf("ERROR: ");
 	textcolor(RESET, WHITE, BLACK);
-	printf("%s\n", format);
+	//printf("%s\n", format);
+	
+	va_list ap;
+	int val;
+	
+	va_start (ap,format);
+	val = vprintf (format,ap);
+	va_end(ap);
+	return val;
 }
 
 int panicf(const char *format, ...){
 	textcolor(BRIGHT, YELLOW, HIDDEN);
 	printf("PANIC: ");
 	textcolor(RESET, WHITE, BLACK);
-	printf("%s\n", format);
+	//printf("%s\n", format);
+	
+	va_list ap;
+	int val;
+	
+	va_start (ap,format);
+	val = vprintf (format,ap);
+	va_end(ap);
+	return val;
 }
